@@ -7,7 +7,7 @@ public class ArrayQueueDemo {//数组模拟队列实现
 
     public static void main(String[] args) {
         ArrayQueue queue = new ArrayQueue(3);
-       char key = ' ';//接受用户的输入
+        char key = ' ';//接受用户的输入
         boolean loop = true;
         Scanner scanner = new Scanner(System.in);
         while(loop){
