@@ -25,6 +25,22 @@ public class SingleLinkedNode {
 class LinkedNode{
     //创建一个带头节点的单链表来管理水浒英雄
     HeroNode head = new HeroNode(0,"","");//头节点不保存任何信息
+    //获得头节点
+
+    public HeroNode getHead() {
+        return head;
+    }
+
+    //计算长度
+    public int length(HeroNode head){
+        HeroNode heroNode = head;
+        int size = 0;
+        while(heroNode != null){
+            size++;
+            heroNode = heroNode.next;
+        }
+        return size;
+    }
     public void add(HeroNode heroNode){//添加结点，默认是尾部插入
         //遍历，找到最后的结点
         HeroNode node = head;
