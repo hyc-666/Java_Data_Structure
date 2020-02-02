@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class polandNatotion {//逆波兰表达式
+public class PolandNatotion {//逆波兰表达式
 
     public static void main(String[] args) {
         //定义逆波兰表达式的字符串
