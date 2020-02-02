@@ -3,9 +3,9 @@ package SingleLinkedNode;
 public class Josephu {//约瑟夫问题，使用单向循环链表完成
     public static void main(String[] args) {
         CircleLinkedList list = new CircleLinkedList();
-        list.init(5);
+        list.init(15);
         //list.show();
-        list.start(1,2,5);//2,4,1,5,3
+        list.start(8,6,15);//2,4,1,5,3
     }
 }
 //创建环形的链表
