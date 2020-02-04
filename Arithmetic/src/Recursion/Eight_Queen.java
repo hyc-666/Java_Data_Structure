@@ -4,7 +4,7 @@ import java.util.Arrays;
 //http://www.7k7k.com/swf/49842.htm
 
 public class Eight_Queen {//八皇后问题
-    /*策略：
+    /**策略：
     * 1)第一个皇后先放第一行第一-列
     * 2)第二个皇后放在第二行第- -列、然后判断是否OK，如果不OK,继续放在第二列、第三列、依次把所有列都放
        完，找到一个合适

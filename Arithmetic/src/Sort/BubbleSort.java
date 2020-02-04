@@ -10,7 +10,7 @@ public class BubbleSort {//冒泡排序（带优化）
         System.out.println(Arrays.toString(arr));
     }
     //冒泡排序的优化
-    /*
+    /**
     * 优化方法是增加一个标志量flag，
     * 假如在某一趟排序中一次交换都没有
     * 那么说明数列已经有序，则可以提前退出循环
