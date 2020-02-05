@@ -57,7 +57,7 @@ public class RadixSort {//基数排序（升级版的桶排序）
                 //放完以后要把本轮桶中的元素全部清空
                 bucketElementCount[k] = 0;
             }
-            System.out.println("第"+ (i + 1) +"轮排序后的结果是："+ Arrays.toString(arr));
+            //System.out.println("第"+ (i + 1) +"轮排序后的结果是："+ Arrays.toString(arr));
         }
 
     }

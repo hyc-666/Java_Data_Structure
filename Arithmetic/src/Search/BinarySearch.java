@@ -1,6 +1,10 @@
 package Search;
 
+import com.sun.javafx.image.IntPixelGetter;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class BinarySearch {//二分查找，也叫折半查找
 
@@ -32,4 +36,5 @@ public class BinarySearch {//二分查找，也叫折半查找
         }
         return -1;
     }
+    //递归的二分查找，返回所有等于给定值的下标
 }
