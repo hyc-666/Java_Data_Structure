@@ -35,7 +35,11 @@ public class HashTabDemo {//使用数组+链表来实现哈希表
                     System.out.println("请输入名字：");
                     String name = scanner.next();
                     Employee employee = new Employee(id,name);
-                    hashTable.add(employee);
+                    try {
+                        hashTable.add(employee);
+                    }catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case'e':
                     loop = false;
@@ -115,8 +119,7 @@ class LinkedEmployee{
         }
         //需要处理相同的id不能重复添加的情况
         if(search(Emp.id)){
-            System.out.println("当前id已经存在，不能重复添加");
-            return;
+            throw new IllegalArgumentException("此条记录已经存在");
         }
         //寻找前一个结点
         if(Emp.id < head.id){//则说明是头插
@@ -217,7 +220,7 @@ class HashTable {
         int index = hashFun(employee.id);
         empListArray[index].add(employee);
     }
-    //使用取模来写出散列函数
+    //使用简单取模来写出散列函数
     private int hashFun(int id){
         return id % size;
     }
@@ -234,7 +237,7 @@ class HashTable {
             System.out.println("没有找到");
         }
         else {
-            System.out.printf("在第%d条链表找到:",index);
+            System.out.printf("在第%d条链表找到:",index + 1);
             System.out.print(node.toString());
             System.out.println();
         }
