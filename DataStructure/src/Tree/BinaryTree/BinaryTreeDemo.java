@@ -1,4 +1,4 @@
-package Tree;
+package Tree.BinaryTree;
 
 //使用前面的HeroNode作为一个结点
 //使用二叉树管理之前的水浒英雄

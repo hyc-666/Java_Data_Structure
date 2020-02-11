@@ -1,4 +1,4 @@
-package Tree;
+package Tree.ThreeadeBinaryTree;
 
 public class ThreadeBinaryTreeDemo {
     public static void main(String[] args) {

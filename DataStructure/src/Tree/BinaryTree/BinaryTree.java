@@ -1,4 +1,4 @@
-package Tree;
+package Tree.BinaryTree;
 
 //定义二叉树
 public class BinaryTree {

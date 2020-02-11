@@ -1,4 +1,4 @@
-package Tree;
+package Tree.ThreeadeBinaryTree;
 
 //线索二叉树
 
