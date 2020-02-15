@@ -20,6 +20,7 @@ public class BinarySearch {//二分查找，也叫折半查找
         Sort.RadixSort.radixSort(arr);
         System.out.println(Arrays.toString(arr));
         System.out.println(binarySerach(arr,0,arr.length,15));
+        System.out.println(binary_Search(arr, 18));
 
     }
     //二分查找
