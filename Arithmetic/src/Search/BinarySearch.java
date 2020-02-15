@@ -23,6 +23,7 @@ public class BinarySearch {//二分查找，也叫折半查找
 
     }
     //二分查找
+    //递归的二分查找，返回所有等于给定值的下标
     public static int binarySerach(int[] arr,int left ,int right,int key){
         while (left < right){
             int mid = left + ((right - left) >>> 1);
@@ -36,5 +37,21 @@ public class BinarySearch {//二分查找，也叫折半查找
         }
         return -1;
     }
-    //递归的二分查找，返回所有等于给定值的下标
+    //二分查找（非递归）
+    public static int binary_Search(int[] arr,int key){
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right){
+            int mid = left + ((right - left) >>> 1);
+            if(key == arr[mid]){
+                return mid;
+            }else if(key < arr[mid]){ //在左半部分查找
+                right = mid - 1;
+            }else { //在右半部分查找
+                left = mid + 1;
+            }
+        }
+        //没有查找到返回 -1
+        return -1;
+    }
 }
