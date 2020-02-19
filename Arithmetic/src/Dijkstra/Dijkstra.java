@@ -1,7 +1,9 @@
 package Dijkstra;
 //迪杰斯特拉算法计算最短路径
-
-import javax.xml.bind.annotation.XmlID;
+/**
+ * 迪杰斯特拉(Dijkstra)算法是典型最短路径算法，用于计算一个结点到其他结点的最短路径。
+ * 它的主要特点是以起始点为中心向外层层扩展(广度优先搜索思想)，直到扩展到终点为止。
+ */
 import java.util.Arrays;
 
 public class Dijkstra {
@@ -48,8 +50,8 @@ class Graph{
             System.out.println(Arrays.toString(link));
         }
     }
-    //迪杰斯特拉算法实现
 
+    //迪杰斯特拉算法实现
     /**
      * @param index 出发顶点
      */
