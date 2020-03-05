@@ -39,9 +39,9 @@ public class HeapSort {//堆排序
      *
      * @param arr 需要调整成大顶堆的二叉树，其实是存储在数组里的
      * @param i 从左至右，从下到上的调整，从左侧第倒数第一个非叶子结点开始
-     * @param len 每次需要调整的数组长度，这个篡改都调整一轮就减一，直到全部调整完毕
+     * @param len 每次需要调整的数组长度，这个长度调整一轮就减一，直到全部调整完毕
      */
-    //调整数组常委一个大顶堆
+    //调整数组成为一个大顶堆
     public static void adjustHeap(int[] arr,int i,int len){
         int temp = arr[i];//先保存当前需要调整的结点
         //从左子树开始
