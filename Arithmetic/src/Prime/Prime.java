@@ -75,16 +75,16 @@ class MinTree{
      * @param v 起始顶点
      */
     public void prime(MGraph graph,int v){
-        int[] visited = new int[graph.verxs];//标记顶点是否被当问过.默认全0，表示还没有被访问
+        int[] visited = new int[graph.vertex];//标记顶点是否被当问过.默认全0，表示还没有被访问
         visited[v] = 1;//标记已经访问
         int h1 = -1;
         int h2 = -1;
         int i = 0,j = 0,k;
         int minWeight = Integer.MAX_VALUE;//初始权值无限大，后续会被替换
-        for (k = 1; k < graph.verxs; k++) {//循环从1开始，因为算法结束后，边一共有vertex - 1条
+        for (k = 1; k < graph.vertex; k++) {//循环从1开始，因为算法结束后，边一共有vertex - 1条
             //每次生成的子图和那个结点的距离最近（权值最小）
-            for (i = 0; i < graph.verxs; i++) {//i指向一个已经被访问过的结点
-                for (j = 0; j < graph.verxs; j++) {//j指向一个还没有被访问过的结点
+            for (i = 0; i < graph.vertex; i++) {//i指向一个已经被访问过的结点
+                for (j = 0; j < graph.vertex; j++) {//j指向一个还没有被访问过的结点
                     //把这个已经访问过的边和没有访问过的边比较权值，把权值替换为一个更小的
                     if(visited[i] == 1 && visited[j] == 0 && graph.weight[i][j] < minWeight){
                         minWeight = graph.weight[i][j];
@@ -104,12 +104,12 @@ class MinTree{
 }
 //图类
 class MGraph{
-    int verxs;//顶点个数
+    int vertex;//顶点个数
     char[] data;//顶点信息，也就是顶点怎么表示
     int[][] weight;//表示图的边的邻接矩阵
 
     public MGraph(int vertex) {
-        this.verxs = vertex;
+        this.vertex = vertex;
         data = new char[vertex];
         weight = new int[vertex][vertex];
     }
