@@ -15,12 +15,15 @@ public class KMPArithmetic {
      *     每次回溯时，通过next数组找到，前面匹配过的位置，省去了大量的计算时间
      */
     public static void main(String[] args) {
-        String str1 = "BBC ABCDAB ABCDABCDABDE";
         String str2 = "ABCDABD";
-        int[] next = kmpNext(str2);
-        System.out.println(Arrays.toString(next));
-        int index = kmpSearch(str1,str2,next);
-        System.out.println("index = " + index);
+//        int[] next = kmpNext(str2);
+//        System.out.println(Arrays.toString(next));
+//        int index = kmpSearch(str1,str2,next);
+//        System.out.println("index = " + index);
+
+        String str1 = "BBC ABCDAB ABCDABCDABDE";
+        str1 =  replace(str1,"AB","ab");
+        System.out.println(str1);
     }
 
     /**
@@ -47,7 +50,7 @@ public class KMPArithmetic {
         return -1;
     }
 
-    //得到字串的部分匹配值表
+    //得到子串的部分匹配值表
     public static int[] kmpNext(String dest){
         //创建部分匹配值表
         int[] next = new int[dest.length()];
@@ -63,5 +66,24 @@ public class KMPArithmetic {
             next[i] = j;
         }
         return next;
+    }
+    //实现方法 replace, 能够替换字符串中的某个部分
+
+    /**
+     * s1中的子串s2用字符串rep替换掉
+     * @param s1 原来的字符串
+     * @param s2 需要将原来的字符串中的子串替换
+     * @param rep 要替换的字符串
+     */
+    public static String replace(String s1,String s2,String rep){
+        //首先使用KMP算法找出要替换的位置
+        int[] next = kmpNext(s2);
+        int index = kmpSearch(s1,s2,next);
+        while (index != -1) {
+            s1 = s1.substring(0, index) + rep + s1.substring(index + s2.length());
+            next = kmpNext(s2);
+            index = kmpSearch(s1,s2,next);
+        }
+        return s1;
     }
 }
