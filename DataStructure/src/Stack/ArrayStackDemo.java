@@ -47,9 +47,10 @@ public class ArrayStackDemo {
 }
 
 class ArrayStack{//数组模拟栈结构
-    private int maxSize;
-    private int[] stack;
-    private  int top = -1;
+    private int maxSize;//栈的大小
+    private int[] stack;//栈中的数组
+    private  int top = -1;//栈顶
+    //栈底是固定的，可以不用标记
 
     public ArrayStack(int maxSize) {
         this.maxSize = maxSize;
