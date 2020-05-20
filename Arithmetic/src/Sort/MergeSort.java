@@ -13,14 +13,16 @@ public class MergeSort {//归并排序
         System.out.println(Arrays.toString(arr));
     }
     //并的方法
+
+    /**
+     *
+     * @param arr 需要排序的原始数组
+     * @param left 左边有序数列的开始索引
+     * @param mid 中间索引
+     * @param right 右边索引
+     * @param temp 做中转的临时数组
+     */
     public static void merge(int[] arr,int left,int mid,int right,int[] temp) {
-        /**参数说明
-         * arr是需要排序的原始数组
-         * left是左边有序数列的开始索引
-         * mid是中间索引
-         * right，右边索引
-         * temp是做中转的临时数组
-         */
         int i = left;//左边有序数组的初始索引
         int j = mid + 1;//右边有序数组的初始索引
         int t = 0;//中转数组的索引

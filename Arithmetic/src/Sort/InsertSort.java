@@ -21,12 +21,12 @@ public class InsertSort { //插入排序
     public static void insertSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             int insertValue = arr[i + 1];//待出入的值
-            int isertIndex = i;//待插入的下标
-            while(isertIndex >= 0 && insertValue < arr[isertIndex]){
-                arr[isertIndex + 1] = arr[isertIndex];
-                isertIndex--;
+            int insertIndex = i;//待插入的下标
+            while(insertIndex >= 0 && insertValue < arr[insertIndex]){
+                arr[insertIndex + 1] = arr[insertIndex];
+                insertIndex--;
             }
-            arr[isertIndex + 1] = insertValue;
+            arr[insertIndex + 1] = insertValue;
         }
     }
 }
