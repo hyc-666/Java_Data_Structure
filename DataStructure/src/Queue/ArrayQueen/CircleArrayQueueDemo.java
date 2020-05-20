@@ -1,4 +1,4 @@
-package Queue;
+package Queue.ArrayQueen;
 
 import java.util.Scanner;
 
@@ -118,4 +118,5 @@ class CircleArrayQueue{
         }
         System.out.println("当前队列的头为：" + array[front]);
     }
+
 }

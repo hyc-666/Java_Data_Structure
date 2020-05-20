@@ -1,6 +1,5 @@
-package Queue;
+package Queue.ArrayQueen;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayQueueDemo {//数组模拟队列实现
